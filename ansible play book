@@ -1,0 +1,16 @@
+---
+- name: Ansible test
+  hosts: localhost
+  tasks:
+  - name: launching AWS instance using Ansible
+    ec2:
+      key_name: "red hat jenkins key"
+      instance_type: t2.micro
+      image: ami-0567e0d2b4b2169ae
+      region: ap-south-1
+      wait: yes
+      count: 1
+      vpc_subnet_id: subnet-d4f5a798
+      assign_public_ip: yes
+      aws_access_key: AKIAVXUBTZQHY57GY4VG
+      aws_secret_key: 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
